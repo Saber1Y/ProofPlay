@@ -1,0 +1,14 @@
+{
+  "name": "proofplay",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@9.12.0",
+  "scripts": {
+    "dev": "pnpm --filter @proofplay/web dev",
+    "dev:web": "pnpm --filter @proofplay/web dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "test": "pnpm --filter @proofplay/contracts test",
+    "typecheck": "pnpm -r typecheck"
+  }
+}
