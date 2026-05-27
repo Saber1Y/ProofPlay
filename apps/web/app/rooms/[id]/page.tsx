@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { LineupCard } from "@/components/LineupCard";
 import { PlayerPicker } from "@/components/PlayerPicker";
+import { RoomActions } from "@/components/RoomActions";
 import {
   getLineupsForRoom,
   getMatchLabel,
@@ -58,17 +59,12 @@ export default async function RoomDetailsPage({ params }: RoomPageProps) {
               <dd>{new Date(room.deadline).toLocaleString("en-GB", { timeZone: "UTC" })} UTC</dd>
             </div>
           </dl>
-
-          <div className="btn-row" style={{ marginTop: "1rem" }}>
-            <button className="btn primary" type="button">
-              Join Room
-            </button>
-            <button className="btn" type="button">
-              Submit Lineup
-            </button>
-          </div>
         </article>
 
+        <RoomActions entryFee={room.entryFee} players={players} />
+      </div>
+
+      <div style={{ marginTop: "1rem" }}>
         <PlayerPicker
           players={players}
           selectedIds={previewLineup?.playerIds ?? []}
