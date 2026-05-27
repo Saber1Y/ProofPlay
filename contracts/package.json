@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "build": "hardhat compile",
+    "deploy:local": "hardhat run scripts/deploy.ts",
+    "deploy:somnia": "hardhat run scripts/deploy.ts --network somnia",
     "test": "hardhat test",
     "lint": "echo 'No contract linter configured yet'",
     "typecheck": "tsc -p tsconfig.json --noEmit"
@@ -12,7 +14,9 @@
     "@openzeppelin/contracts": "^5.1.0"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^7.0.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.8.6",
+    "@nomicfoundation/hardhat-toolbox": "hh2",
     "dotenv": "^16.4.5",
     "hardhat": "^2.22.17",
     "ts-node": "^10.9.2",
