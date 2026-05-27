@@ -56,7 +56,7 @@ export default function CreateRoomPage() {
       const matchKey = `${selectedMatch?.id ?? matchId}:${selectedMatch?.homeTeam ?? "home"}:${selectedMatch?.awayTeam ?? "away"}`;
       const hashedMatchId = keccak256(toBytes(matchKey));
 
-      writeContract.mutate({
+      writeContract.writeContract({
         abi: matchRoomFactoryAbi,
         address: contractAddresses.factory,
         functionName: "createRoom",
