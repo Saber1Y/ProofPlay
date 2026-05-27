@@ -22,7 +22,7 @@ function normalizeAddress(value: string): Address {
 export function RoomActions({ entryFee, players }: RoomActionsProps) {
   const { isConnected } = useAccount();
 
-  const [roomAddressInput, setRoomAddressInput] = useState(contractAddresses.room);
+  const [roomAddressInput, setRoomAddressInput] = useState<string>(contractAddresses.room);
   const [selectedPlayerIds, setSelectedPlayerIds] = useState<number[]>([]);
   const [captainId, setCaptainId] = useState<string>("");
   const [formError, setFormError] = useState<string | null>(null);
@@ -64,7 +64,7 @@ export function RoomActions({ entryFee, players }: RoomActionsProps) {
     }
 
     try {
-      joinMutation.mutate({
+      joinMutation.writeContract({
         abi: fantasyMatchRoomAbi,
         address: roomAddress,
         functionName: "joinRoom",
@@ -101,7 +101,7 @@ export function RoomActions({ entryFee, players }: RoomActionsProps) {
     }
 
     try {
-      submitMutation.mutate({
+      submitMutation.writeContract({
         abi: fantasyMatchRoomAbi,
         address: roomAddress,
         functionName: "submitLineup",
