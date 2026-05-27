@@ -1,12 +1,14 @@
-type WalletButtonProps = {
-  connected?: boolean;
-  address?: string;
-};
+"use client";
 
-export function WalletButton({ connected = false, address = "0xA1c...B92e" }: WalletButtonProps) {
-  if (connected) {
-    return <button className="wallet-chip">Connected: {address}</button>;
-  }
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
-  return <button className="wallet-chip wallet-chip--cta">Connect Wallet</button>;
+export function WalletButton() {
+  return (
+    <ConnectButton
+      label="Connect Wallet"
+      accountStatus={{ smallScreen: "avatar", largeScreen: "address" }}
+      chainStatus={{ smallScreen: "icon", largeScreen: "name" }}
+      showBalance={{ smallScreen: false, largeScreen: false }}
+    />
+  );
 }
