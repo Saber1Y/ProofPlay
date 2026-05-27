@@ -335,6 +335,8 @@ a {
   padding: 0.5rem;
   display: grid;
   gap: 0.2rem;
+  cursor: pointer;
+  text-align: left;
 }
 
 .player-chip strong {
@@ -361,6 +363,10 @@ a {
 .player-chip.is-captain {
   border-color: #89b3f3;
   background: #eff5ff;
+}
+
+button.player-chip {
+  font: inherit;
 }
 
 .lineup-list {
