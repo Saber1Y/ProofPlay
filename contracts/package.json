@@ -6,6 +6,7 @@
     "build": "hardhat compile",
     "deploy:local": "hardhat run scripts/deploy.ts",
     "deploy:somnia": "hardhat run scripts/deploy.ts --network somnia",
+    "smoke:local": "hardhat run scripts/smoke-local.ts --network localhost",
     "test": "hardhat test",
     "lint": "echo 'No contract linter configured yet'",
     "typecheck": "tsc -p tsconfig.json --noEmit"
