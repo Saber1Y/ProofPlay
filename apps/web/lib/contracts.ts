@@ -70,6 +70,27 @@ export const fantasyMatchRoomAbi = [
   {
     type: "function",
     stateMutability: "view",
+    name: "locked",
+    inputs: [],
+    outputs: [{ name: "", type: "bool" }]
+  },
+  {
+    type: "function",
+    stateMutability: "view",
+    name: "lineupDeadline",
+    inputs: [],
+    outputs: [{ name: "", type: "uint256" }]
+  },
+  {
+    type: "function",
+    stateMutability: "view",
+    name: "maxParticipants",
+    inputs: [],
+    outputs: [{ name: "", type: "uint256" }]
+  },
+  {
+    type: "function",
+    stateMutability: "view",
     name: "entryFee",
     inputs: [],
     outputs: [{ name: "", type: "uint256" }]
@@ -87,6 +108,27 @@ export const fantasyMatchRoomAbi = [
     name: "winner",
     inputs: [],
     outputs: [{ name: "", type: "address" }]
+  },
+  {
+    type: "function",
+    stateMutability: "view",
+    name: "payoutComplete",
+    inputs: [],
+    outputs: [{ name: "", type: "bool" }]
+  },
+  {
+    type: "function",
+    stateMutability: "view",
+    name: "prizePool",
+    inputs: [],
+    outputs: [{ name: "", type: "uint256" }]
+  },
+  {
+    type: "function",
+    stateMutability: "view",
+    name: "latestReceipt",
+    inputs: [],
+    outputs: [{ name: "", type: "string" }]
   },
   {
     type: "function",
