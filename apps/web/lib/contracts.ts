@@ -1,6 +1,7 @@
 import type { Address } from "viem";
 
 export const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000" as Address;
+export const LAST_ROOM_ADDRESS_STORAGE_KEY = "proofplay:last-room-address";
 
 export const contractAddresses = {
   factory: (process.env.NEXT_PUBLIC_FACTORY_ADDRESS ?? ZERO_ADDRESS) as Address,
